@@ -25,7 +25,7 @@ cv.imshow("Original & Grayscale", stacked)
 
 
 while(True):
-    if cv.waitKey(1)==ord('q'):
-        cv.destroyAllWindows()
-        break
+    cv.waitKey()
+    cv.destroyAllWindows()
+    break
 

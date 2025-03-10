@@ -1,10 +1,12 @@
 import cv2
 import numpy as np
+import sys
+
 cap = cv2.VideoCapture(0)
 
 # Check if the webcam is opened correctly
 if not cap.isOpened():
-    raise IOError("Cannot open webcam")
+    sys.exit("Cannot open webcam")
 
 while True:
     ret, frame = cap.read()
