@@ -15,15 +15,15 @@ _, bin_image = cv.threshold(gray_image, threshold_value, 255, cv.THRESH_BINARY)
 
 
 # 히스토그램 계산
-histogram = cv.calcHist([bin_image], [0], None, [256], [0, 256])
+histogram = cv.calcHist([gray_image], [0], None, [256], [0, 256])
 
 # Display results
 plt.figure(figsize=(10, 5))
 
 # 시각화
 plt.subplot(1, 2, 1)
-plt.imshow(bin_image, cmap="gray")
-plt.title("Binary Image")
+plt.imshow(gray_image, cmap="gray")
+plt.title("grayscale Image")
 plt.axis("off")
 
 plt.subplot(1, 2, 2)
