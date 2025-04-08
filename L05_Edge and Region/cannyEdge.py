@@ -10,7 +10,7 @@ edges = cv2.Canny(gray, 100, 200)
 
 # 3. Hough 변환으로 직선 검출
 lines = cv2.HoughLinesP(edges, rho=1, theta=np.pi/180, threshold=100, 
-                        minLineLength=50, maxLineGap=10)
+                        minLineLength=150, maxLineGap=10)
 
 # 4. 검출된 직선 원본 이미지에 빨간 선으로 표시
 for line in lines:
